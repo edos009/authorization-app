@@ -34,83 +34,36 @@
   }
 
   &_input {
-    width: 100%;
-
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 5px;
+    @extend %input;
     margin-bottom: 25px;
-
-    color: $color-black;
-
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.2em;
-
     &_text {
-      content: "";
-      position: absolute;
-
-      top: 55px;
-      left: 22px;
-
-      color: $color-light-green;
-
-      font-weight: 700;
-      font-size: 16px;
+      @extend %input_text;
 
       &::after {
-        content: "";
-        position: absolute;
-
-        width: 20px;
-        height: 20px;
-
-        top: -2px;
-        left: -22px;
-
-        background-repeat: no-repeat;
-        background-size: cover;
+        @extend %input_text_after;
       }
     }
 
     &_correct {
-      border: 2px solid $color-light-green;
+      @extend %input_correct;
 
       &_text {
         color: $color-light-green;
         &::after {
-          background-image: url("../../../public/static/images/check.svg");
+          @extend %input_correct_text_after;
         }
       }
     }
 
-    &_error {
-      border: 2px solid $color-red;
-
-      &_text {
-        color: $color-red;
-        &::after {
-          background-image: url("../../../public/static/images/alert.svg");
-        }
+    &_error_text {
+      color: $color-red;
+      &::after {
+        @extend %input_error_text_after;
       }
     }
   }
 
   &_btn {
-    width: 100%;
-
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    margin: 5px 0;
-
-    color: $color-white;
-    background-color: $color-ocean-blue;
-
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.2em;
-    text-transform: uppercase;
+    @extend %btn;
   }
 }

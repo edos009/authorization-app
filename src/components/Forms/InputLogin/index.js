@@ -4,7 +4,7 @@ import cx from "classnames";
 
 import styles from "../../Login/Login.module.scss";
 
-const Input = (props) => {
+const InputLogin = (props) => {
   const { name, ...anotherProps } = props;
   return (
     <label className={styles.login_wrapper}>
@@ -26,7 +26,7 @@ const Input = (props) => {
                     styles.login_input_correct_text
                   )}
                 >
-                  Valid email
+                  The field is correct
                 </div>
               ) : null}
             </>
@@ -42,4 +42,4 @@ const Input = (props) => {
   );
 };
 
-export default Input;
+export default InputLogin;

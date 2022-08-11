@@ -1,0 +1,178 @@
+@import "../../common/style/colors";
+@import "../../common/style/template";
+
+.signup {
+  padding: 40px 20px;
+
+  .container {
+    @extend %container;
+  }
+
+  &_title {
+    margin-bottom: 5px;
+
+    color: $color-white;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &_subtitle {
+    margin-bottom: 20px;
+
+    color: $color-white;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2em;
+    text-align: center;
+  }
+
+  &_form {
+    max-width: 500px;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin: 0 auto;
+  }
+
+  &_wrapper {
+    position: relative;
+    flex-basis: 240px;
+  }
+
+  &_input {
+    @extend %input;
+
+    &_text {
+      @extend %input_text;
+
+      &::after {
+        @extend %input_text_after;
+      }
+    }
+
+    &_correct {
+      @extend %input_correct;
+
+      &_text {
+        color: $color-light-green;
+        &::after {
+          @extend %input_correct_text_after;
+        }
+      }
+    }
+
+    &_error {
+      @extend %input_error;
+
+      &_text {
+        color: $color-red;
+        &::after {
+          @extend %input_error_text_after;
+        }
+      }
+    }
+  }
+
+  &_box_radio {
+    position: relative;
+    width: 100%;
+
+    margin-top: 10px;
+  }
+
+  &_radio {
+    display: none;
+
+    &:checked + &_label::before {
+      display: block;
+    }
+
+    &_label {
+      display: block;
+      position: relative;
+
+      padding: 20px 10px 20px 40px;
+      border: 2px solid $color-white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        border: 1px solid $color-light-grey;
+        border-radius: 50%;
+
+        width: 19px;
+        height: 19px;
+
+        top: 23px;
+        left: 12px;
+
+        background-color: $color-white;
+      }
+
+      &::before {
+        display: none;
+        content: "";
+        position: absolute;
+
+        width: 13px;
+        height: 13px;
+
+        top: 26px;
+        left: 15px;
+
+        border-radius: 50%;
+
+        z-index: 99;
+
+        background-color: $color-light-grey;
+      }
+
+      &_title {
+        margin-bottom: 5px;
+
+        color: $color-white;
+
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 1.2em;
+      }
+      &_text {
+        color: $color-white;
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.2em;
+      }
+    }
+
+    &_text{
+      @extend %input_text;
+      top: 190px;
+      &::after {
+        @extend %input_text_after;
+      }
+    }
+
+    &_error_text {
+      color: $color-red;
+      &::after {
+        @extend %input_error_text_after;
+      }
+    }
+  }
+
+  &_btn{
+    @extend %btn;
+  }
+}

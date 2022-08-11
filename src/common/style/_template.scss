@@ -1,7 +1,82 @@
-%container{
+%container {
   max-width: 1230px;
   width: 100%;
 
   padding: 0 15px;
   margin: 0 auto;
+}
+
+%input {
+  width: 100%;
+
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  color: $color-black;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+%input_text {
+  content: "";
+  position: absolute;
+
+  top: 55px;
+  left: 22px;
+
+  color: $color-light-green;
+
+  font-weight: 700;
+  font-size: 16px;
+}
+
+%input_text_after {
+  content: "";
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  top: -2px;
+  left: -22px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%input_correct {
+  border: 2px solid $color-light-green;
+}
+
+%input_correct_text_after {
+  background-image: url("../../../public/static/images/check.svg");
+}
+
+%input_error {
+  border: 2px solid $color-red;
+}
+
+%input_error_text_after {
+  background-image: url("../../../public/static/images/alert.svg");
+}
+
+%btn {
+  width: 100%;
+
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 5px 0;
+
+  color: $color-white;
+  background-color: $color-ocean-blue;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2em;
+  text-transform: uppercase;
 }

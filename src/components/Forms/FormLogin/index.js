@@ -2,8 +2,9 @@ import React from "react";
 import { Form, Formik } from "formik";
 import { schema_login } from "../../../utils/schemas";
 
+import InputLogin from "../InputLogin";
+
 import styles from "../../Login/Login.module.scss";
-import Input from "../Input";
 
 const initialValues = {
   email: "",
@@ -23,8 +24,18 @@ const FormLogin = () => {
       validationSchema={schema_login}
     >
       <Form className={styles.login_form}>
-        <Input name="email" type="text" placeholder="Email address" />
-        <Input name="password" type="password" placeholder="Password" />
+        <InputLogin
+          name="email"
+          type="text"
+          placeholder="Email address"
+          autoComplete="off"
+        />
+        <InputLogin
+          name="password"
+          type="password"
+          placeholder="Password"
+          autoComplete="off"
+        />
 
         <input className={styles.login_btn} type="submit" value="Login" />
       </Form>
