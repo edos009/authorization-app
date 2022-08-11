@@ -1,10 +1,16 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import cx from "classnames";
 
 import styles from "./Header.module.scss";
 
 const Header = (props) => {
   const { pathname } = useLocation();
+  const styleLink = cx(styles.header_link, {
+    [styles.header_link_signup]: pathname === "/login",
+    [styles.header_link_login]: pathname === "/signup" || pathname === "/",
+  });
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -17,9 +23,13 @@ const Header = (props) => {
             />
           </Link>
           {pathname === "/login" ? (
-            <Link to="/signup">signup</Link>
+            <Link className={styleLink} to="/signup">
+              signup
+            </Link>
           ) : (
-            <Link to="/login">login</Link>
+            <Link className={styleLink} to="/login">
+              login
+            </Link>
           )}
         </div>
       </div>

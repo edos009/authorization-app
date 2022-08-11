@@ -1,0 +1,116 @@
+@import "../../common/style/colors";
+@import "../../common/style/template";
+
+.login {
+  padding: 40px 20px;
+
+  .container {
+    @extend %container;
+  }
+
+  &_title {
+    margin-bottom: 20px;
+
+    color: $color-white;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &_form {
+    max-width: 500px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+
+  &_wrapper {
+    position: relative;
+  }
+
+  &_input {
+    width: 100%;
+
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 25px;
+
+    color: $color-black;
+
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2em;
+
+    &_text {
+      content: "";
+      position: absolute;
+
+      top: 55px;
+      left: 22px;
+
+      color: $color-light-green;
+
+      font-weight: 700;
+      font-size: 16px;
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        width: 20px;
+        height: 20px;
+
+        top: -2px;
+        left: -22px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &_correct {
+      border: 2px solid $color-light-green;
+
+      &_text {
+        color: $color-light-green;
+        &::after {
+          background-image: url("../../../public/static/images/check.svg");
+        }
+      }
+    }
+
+    &_error {
+      border: 2px solid $color-red;
+
+      &_text {
+        color: $color-red;
+        &::after {
+          background-image: url("../../../public/static/images/alert.svg");
+        }
+      }
+    }
+  }
+
+  &_btn {
+    width: 100%;
+
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin: 5px 0;
+
+    color: $color-white;
+    background-color: $color-ocean-blue;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+  }
+}

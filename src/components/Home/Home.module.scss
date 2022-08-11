@@ -1,0 +1,19 @@
+@import "../../common/style/colors";
+@import "../../common/style/template";
+
+.home{
+  padding: 40px 20px;
+
+  .container{
+    @extend %container;
+  }
+
+  &_title{
+    color: $color-white;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
