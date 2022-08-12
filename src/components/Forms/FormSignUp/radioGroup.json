@@ -1,0 +1,14 @@
+[
+  {
+    "id": "one",
+    "connection": "join_buyer",
+    "title": "Join as a Buyer",
+    "text": "I am looking for a Name, Logo or Tagline for my business, brand or product."
+  },
+  {
+    "id": "two",
+    "connection": "join_seller",
+    "title": "Join As a Creative or Marketplace Seller",
+    "text": "I plan to submit name ideas, Logo designs or sell names in Domain Marketplace."
+  }
+]

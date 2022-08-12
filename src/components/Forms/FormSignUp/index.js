@@ -5,6 +5,7 @@ import { schema_signup } from "../../../utils/schemas";
 import styles from "../../SignUp/SignUp.module.scss";
 import RadioSignUp from "../RadioSignUp";
 import InputSignUp from "../InputSignUp";
+import radioGroup from './radioGroup.json'
 
 const initialValues = {
   fname: "",
@@ -15,21 +16,6 @@ const initialValues = {
   password_confirm: "",
   picked: "",
 };
-
-const radioGroup = [
-  {
-    id: "one",
-    connection: "join_buyer",
-    title: "Join as a Buyer",
-    text: "I am looking for a Name, Logo or Tagline for my business, brand or product.",
-  },
-  {
-    id: "two",
-    connection: "join_seller",
-    title: "Join As a Creative or Marketplace Seller",
-    text: "I plan to submit name ideas, Logo designs or sell names in Domain Marketplace.",
-  },
-];
 
 const FormSignUp = () => {
   const onSubmit = (values, formikBag) => {
