@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Formik } from "formik";
 import { schema_login } from "../../../utils/schemas";
+import cx from "classnames";
 
 import InputLogin from "../InputLogin";
 
@@ -53,7 +54,12 @@ class FormLogin extends Component {
             />
             <button
               type="button"
-              className={styles.btn_show_password}
+              className={cx(
+                styles.btn_show_password,
+                isTypePassword
+                  ? styles.btn_show_password_off
+                  : styles.btn_show_password_on
+              )}
               onClick={this.handlerShowPassword}
             ></button>
           </div>

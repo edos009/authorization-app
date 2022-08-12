@@ -227,4 +227,12 @@
 
 .btn_show_password {
   @extend %btn_show_password;
+
+  &_on {
+    background-image: url("../../../public/static/images/eye.svg");
+  }
+
+  &_off {
+    background-image: url("../../../public/static/images/eye-off.svg");
+  }
 }

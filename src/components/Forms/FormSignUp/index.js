@@ -2,10 +2,13 @@ import { Form, Formik } from "formik";
 import React, { Component } from "react";
 import { schema_signup } from "../../../utils/schemas";
 
-import styles from "../../SignUp/SignUp.module.scss";
+import cx from "classnames";
+
 import RadioSignUp from "../RadioSignUp";
 import InputSignUp from "../InputSignUp";
 import radioGroup from "./radioGroup.json";
+
+import styles from "../../SignUp/SignUp.module.scss";
 
 const initialValues = {
   fname: "",
@@ -31,7 +34,7 @@ class FormSignUp extends Component {
   };
 
   handlerShowPassword = () => {
-    const {isTypePassword} = this.state;
+    const { isTypePassword } = this.state;
     this.setState({ isTypePassword: !isTypePassword });
   };
 
@@ -83,7 +86,12 @@ class FormSignUp extends Component {
             />
             <button
               type="button"
-              className={styles.btn_show_password}
+              className={cx(
+                styles.btn_show_password,
+                isTypePassword
+                  ? styles.btn_show_password_off
+                  : styles.btn_show_password_on
+              )}
               onClick={this.handlerShowPassword}
             ></button>
           </div>
@@ -96,7 +104,12 @@ class FormSignUp extends Component {
             />
             <button
               type="button"
-              className={styles.btn_show_password}
+              className={cx(
+                styles.btn_show_password,
+                isTypePasswordConfirm
+                  ? styles.btn_show_password_off
+                  : styles.btn_show_password_on
+              )}
               onClick={this.handlerShowPasswordConfirm}
             ></button>
           </div>
