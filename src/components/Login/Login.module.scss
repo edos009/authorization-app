@@ -1,5 +1,6 @@
 @import "../../common/style/colors";
 @import "../../common/style/template";
+@import "../../common/style/mixins";
 
 .login {
   padding: 40px 20px;
@@ -65,5 +66,27 @@
 
   &_btn {
     @extend %btn;
+  }
+
+  @media (max-width: 570px) {
+    &_title {
+      margin-bottom: 30px;
+
+      @include title_fs_bp(40px);
+    }
+  }
+
+  @media (max-width: 450px) {
+    &_title {
+      @include title_fs_bp(25px);
+    }
+  }
+
+  @media (max-width: 350px) {
+    padding: 20px;
+
+    &_title {
+      @include title_fs_bp(22px);
+    }
   }
 }

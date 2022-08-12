@@ -1,5 +1,6 @@
 @import "../../common/style/colors";
 @import "../../common/style/template";
+@import "../../common/style/mixins";
 
 .signup {
   padding: 40px 20px;
@@ -156,7 +157,7 @@
       }
     }
 
-    &_text{
+    &_text {
       @extend %input_text;
       top: 190px;
       &::after {
@@ -172,7 +173,41 @@
     }
   }
 
-  &_btn{
+  &_btn {
     @extend %btn;
+  }
+
+  @media (max-width: 570px) {
+    &_title {
+      @include title_fs_bp(40px);
+    }
+
+    &_subtitle {
+      margin-bottom: 30px;
+
+      font-size: 16px;
+    }
+
+    &_wrapper {
+      flex-basis: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &_title {
+      @include title_fs_bp(25px);
+    }
+  }
+
+  @media (max-width: 350px) {
+    padding: 20px;
+
+    &_title {
+      @include title_fs_bp(22px);
+    }
+
+    &_subtitle {
+      font-size: 14px;
+    }
   }
 }

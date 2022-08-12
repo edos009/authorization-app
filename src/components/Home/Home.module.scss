@@ -1,5 +1,6 @@
 @import "../../common/style/colors";
 @import "../../common/style/template";
+@import "../../common/style/mixins";
 
 .home{
   padding: 40px 20px;
@@ -15,5 +16,26 @@
     line-height: 1.2em;
     text-transform: uppercase;
     text-align: center;
+  }
+
+  @media (max-width: 570px) {
+    &_title {
+      @include title_fs_bp(40px);
+    }
+
+  }
+
+  @media (max-width: 450px) {
+    &_title {
+      @include title_fs_bp(25px);
+    }
+  }
+
+  @media (max-width: 350px) {
+    padding: 20px;
+
+    &_title {
+      @include title_fs_bp(22px);
+    }
   }
 }

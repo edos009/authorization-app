@@ -16,7 +16,8 @@
     margin: 0 50px;
   }
 
-  &_link:focus, &_logo:focus {
+  &_link:focus,
+  &_logo:focus {
     outline: 0;
     outline-offset: 0;
   }
@@ -35,5 +36,23 @@
     font-size: 20px;
     text-transform: capitalize;
     text-align: center;
+  }
+
+  @media (max-width: 570px) {
+    padding: 50px 0 15px;
+  }
+
+  @media (max-width: 450px) {
+    &_inner {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 350px) {
+    &_inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
   }
 }
