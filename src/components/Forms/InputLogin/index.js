@@ -11,7 +11,6 @@ const InputLogin = (props) => {
     <label className={styles.login_wrapper}>
       <Field name={name} {...anotherProps}>
         {({ field, form, meta }) => {
-          console.log(meta);
           const styleInput = cx(styles.login_input, {
             [styles.login_input_error]: meta.error && meta.touched,
             [styles.login_input_correct]:
@@ -24,7 +23,8 @@ const InputLogin = (props) => {
                 <div
                   className={cx(
                     styles.login_input_text,
-                    styles.login_input_correct_text
+                    styles.login_input_correct_text,
+                    { [styles.login_input_text_password]: name === "password" }
                   )}
                 >
                   The field is correct
@@ -35,7 +35,9 @@ const InputLogin = (props) => {
         }}
       </Field>
       <ErrorMessage
-        className={cx(styles.login_input_text, styles.login_input_error_text)}
+        className={cx(styles.login_input_text, styles.login_input_error_text, {
+          [styles.login_input_text_password]: name === "password",
+        })}
         name={name}
         component="div"
       />
@@ -49,7 +51,7 @@ InputLogin.defaultProps = {
 
 InputLogin.propTypes = {
   name: PropTypes.string.isRequired,
-  anotherProps: PropTypes.object
+  anotherProps: PropTypes.object,
 };
 
 export default InputLogin;

@@ -81,3 +81,20 @@
   text-transform: uppercase;
 }
 
+%btn_show_password {
+  content: "";
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../../../public/static/images/eye.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  top: 12px;
+  right: 10px;
+}

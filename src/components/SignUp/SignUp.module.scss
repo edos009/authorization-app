@@ -52,6 +52,10 @@
     &_text {
       @extend %input_text;
 
+      &_password {
+        top: 40px;
+      }
+
       &::after {
         @extend %input_text_after;
       }
@@ -210,4 +214,17 @@
       font-size: 14px;
     }
   }
+}
+
+.box_input_password {
+  position: relative;
+  flex-basis: 240px;
+
+  @media (max-width: 570px) {
+    flex-basis: 100%;
+  }
+}
+
+.btn_show_password {
+  @extend %btn_show_password;
 }

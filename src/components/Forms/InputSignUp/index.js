@@ -22,7 +22,11 @@ const InputSignUp = (props) => {
                 <div
                   className={cx(
                     styles.signup_input_text,
-                    styles.signup_input_correct_text
+                    styles.signup_input_correct_text,
+                    {
+                      [styles.signup_input_text_password]:
+                        name === "password" || name === "password_confirm",
+                    }
                   )}
                 >
                   The field is correct
@@ -33,7 +37,14 @@ const InputSignUp = (props) => {
         }}
       </Field>
       <ErrorMessage
-        className={cx(styles.signup_input_text, styles.signup_input_error_text)}
+        className={cx(
+          styles.signup_input_text,
+          styles.signup_input_error_text,
+          {
+            [styles.signup_input_text_password]:
+              name === "password" || name === "password_confirm",
+          }
+        )}
         name={name}
         component="div"
       />
