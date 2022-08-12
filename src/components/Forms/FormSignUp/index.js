@@ -13,19 +13,19 @@ const initialValues = {
   email: "",
   password: "",
   password_confirm: "",
-  picked: '',
+  picked: "",
 };
 
 const radioGroup = [
   {
-    id: 'one',
-    connection: 'join_buyer',
+    id: "one",
+    connection: "join_buyer",
     title: "Join as a Buyer",
     text: "I am looking for a Name, Logo or Tagline for my business, brand or product.",
   },
   {
-    id: 'two',
-    connection: 'join_seller',
+    id: "two",
+    connection: "join_seller",
     title: "Join As a Creative or Marketplace Seller",
     text: "I plan to submit name ideas, Logo designs or sell names in Domain Marketplace.",
   },
@@ -81,7 +81,11 @@ const FormSignUp = () => {
 
         <RadioSignUp name="picked" type="radio" radioGroup={radioGroup} />
 
-        <input className={styles.signup_btn} type='submit' value='Create Account'/>
+        <input
+          className={styles.signup_btn}
+          type="submit"
+          value="Create Account"
+        />
       </Form>
     </Formik>
   );

@@ -32,7 +32,9 @@ export const schema_signup = Yup.object({
   password_confirm: Yup.string()
     .oneOf([Yup.ref("password")], "Password did not match")
     .required("This field is required"),
-  picked: Yup.string().required("One of the field is required"),
+  picked: Yup.string()
+    .oneOf(["one", "two"], '!!!')
+    .required("One of the field is required"),
 });
 
 export const schema_login = Yup.object({
