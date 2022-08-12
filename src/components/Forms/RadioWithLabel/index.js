@@ -1,5 +1,6 @@
 import React from "react";
 import { Field } from "formik";
+import { PropTypes } from "prop-types";
 
 import styles from "../../SignUp/SignUp.module.scss";
 
@@ -24,6 +25,31 @@ const RadioWithLabel = (props) => {
       </label>
     </>
   );
+};
+
+export const rgPropTypes = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  connection: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+});
+
+export const rgDefaultProps = {
+  id: "test-id",
+  connection: "test-connection",
+  title: "test-title",
+  text: "test-text",
+};
+
+RadioWithLabel.defaultProps = {
+  name: "test-name",
+  rg: rgDefaultProps,
+};
+
+RadioWithLabel.propTypes = {
+  name: PropTypes.string.isRequired,
+  rg: rgPropTypes,
+  anotherProps: PropTypes.object,
 };
 
 export default RadioWithLabel;

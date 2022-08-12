@@ -3,7 +3,7 @@ import FormSignUp from '../Forms/FormSignUp';
 
 import styles from './SignUp.module.scss'
 
-const SignUp = (props) => {
+const SignUp = () => {
   return (
     <section className={styles.signup}>
       <div className={styles.container}>

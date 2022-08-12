@@ -1,6 +1,7 @@
 import React from "react";
 import { ErrorMessage, Field } from "formik";
 import cx from "classnames";
+import PropTypes from "prop-types";
 
 import styles from "../../Login/Login.module.scss";
 
@@ -40,6 +41,15 @@ const InputLogin = (props) => {
       />
     </label>
   );
+};
+
+InputLogin.defaultProps = {
+  name: "test-name",
+};
+
+InputLogin.propTypes = {
+  name: PropTypes.string.isRequired,
+  anotherProps: PropTypes.object
 };
 
 export default InputLogin;

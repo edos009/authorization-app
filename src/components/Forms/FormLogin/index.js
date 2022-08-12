@@ -13,7 +13,6 @@ const initialValues = {
 
 const FormLogin = () => {
   const onSubmit = (values, formikBag) => {
-    console.log(values);
     formikBag.resetForm();
   };
 

@@ -1,4 +1,5 @@
 import React from "react";
+
 import FormLogin from "../Forms/FormLogin";
 
 import styles from "./Login.module.scss";
@@ -11,7 +12,7 @@ const Login = () => {
           <h1 className={styles.login_title}>login to your account</h1>
         </div>
       </div>
-      <FormLogin/>
+      <FormLogin />
     </section>
   );
 };

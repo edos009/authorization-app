@@ -33,7 +33,6 @@ const radioGroup = [
 
 const FormSignUp = () => {
   const onSubmit = (values, formikBag) => {
-    console.log(values);
     formikBag.resetForm();
   };
   return (
